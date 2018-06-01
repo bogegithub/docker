@@ -1,0 +1,23 @@
+docker优势
+1.新型的创建分布式应用程序的方式,快速分发和部署
+2.通过应用打包应用,解耦应用和运行平台
+3.docker快速创建和删除容器
+4,更高效的资源利用
+5,更轻松的迁移和扩展
+6.更简单的更新管理
+doker 三大核心概念
+1.Doker 镜像 一个镜像可以是包含一个基本操作系统里面安装了Nginx 可以成为Nginx镜像 (镜像自身自读)
+2.Doker 容器 可以看做一个简易版的Linux环境,以及运行在其中的应用程序打包而成的盒子 (容器从镜像启动时候,会在镜像的最上层创建可写层)
+3.DOker 创库 存放镜像文件的场所 分为私有和公共两种形式
+docker 创建镜像的方法3种
+1.基于已有的镜像的容器创建,
+2.基于本地模板导入,
+3.基于Dockerfile创建
+docker 导出  docker save -o xxx.tar  nginx:latest
+docker 载入  docker load --input  xxx.tar 或者 docker load < xxx.tar
+docker 上传  docker push xxx
+docker 命令操作
+docker create  这个命令创建容器是没有启动的 需要docker run  或者 docker start 启动  推荐使用 docker run  创建容器并启动
+docker ps  列出容器
+docker rm  删除容器
+docker attach  和 docker exec -it 都是进入容器  推荐后一种
